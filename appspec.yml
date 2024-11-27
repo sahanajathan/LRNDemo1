@@ -2,17 +2,12 @@ version: 0.0
 os: linux
 files:
   - source: /docker-compose.yml
-    destination: /home/ec2-user/docker-compose.yml
+    destination: /home/ec2-user/
+  - source: /nginx.conf
+    destination: /home/ec2-user/
 hooks:
-  BeforeInstall:
-    - location: scripts/before_install.sh
-      timeout: 300
   AfterInstall:
     - location: scripts/after_install.sh
       timeout: 300
-  ApplicationStart:
-    - location: scripts/application_start.sh
-      timeout: 300
-  ValidateService:
-    - location: scripts/validate_service.sh
-      timeout: 300
+      runas: ec2-user
+  
