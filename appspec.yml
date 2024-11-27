@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /docker-compose.yml
-    destination: /home/ec2-user/docker-compose.yml
+    destination: /home/ec2-user/
 hooks:
   BeforeInstall:
     - location: echo "BeforeInstall: No custom script provided"
