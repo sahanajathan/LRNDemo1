@@ -1,18 +1,2 @@
 version: 0.0
 os: linux
-files:
-  - source: /docker-compose.yml
-    destination: /home/ec2-user/
-hooks:
-  BeforeInstall:
-    - location: echo "BeforeInstall: No custom script provided"
-      timeout: 300
-  AfterInstall:
-    - location: echo "AfterInstall: No custom script provided"
-      timeout: 300
-  ApplicationStart:
-    - location: echo "ApplicationStart: No custom script provided"
-      timeout: 300
-  ValidateService:
-    - location: echo "ValidateService: No custom script provided"
-      timeout: 300
